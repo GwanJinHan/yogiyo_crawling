@@ -1,0 +1,38 @@
+{
+  "updated_at": 1683812797127,
+  "address": "서울특별시 동대문구 이문동 256-321",
+  "address_input": "서울특별시 동대문구 이문동 256-321",
+  "point": { "lat": 37.6012325, "lng": 127.06445828 },
+  "method": "geolocation",
+  "zipcode": "000000",
+  "district": ["서울특별시", "동대문구", "이문동", "256-321"],
+  "dongmyun": "이문동",
+  "sido": "서울특별시",
+  "adiyo": {
+    "law": {
+      "sido": "서울특별시",
+      "sigugun": "동대문구",
+      "dongmyun": "이문동",
+      "ri": "",
+      "detail": "256-321"
+    },
+    "point": { "lat": 37.6012325, "lng": 127.06445828 },
+    "road": {
+      "sido": "서울특별시",
+      "sigugun": "동대문구",
+      "dongmyun": "이문로46길",
+      "ri": "",
+      "detail": "44-10"
+    },
+    "admin": {
+      "sido": "서울특별시",
+      "sigugun": "동대문구",
+      "dongmyun": "이문2동",
+      "ri": "",
+      "detail": "256-321"
+    },
+    "zipcode": "02411",
+    "display_address_long": "이문로46길 44-10",
+    "display_address_short": "이문로46길"
+  }
+}

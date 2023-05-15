@@ -1,0 +1,39 @@
+{
+  "동 이름 영어로": {
+    "type :치킨, 1인분 주문, 프랜차이즈 등등...": {
+      "음식점 이름": {
+        "yogiyoQuery": "요기요 쿼리 (URL에 음식점마다 쿼리가 있다.)",
+        "titleImgUrl": "음식점 대표 사진 URL",
+        "score": "별점을 숫자로",
+        "minimumOrderedPrice": "최소 주문 금액",
+        "review": [
+          {
+            "name": "작성자 이름",
+            "date": "날짜",
+            "score": ["전체 별점", "맛 별점", "양 별점", "배달 별점"],
+            "menu": "주문한 메뉴",
+            "imgUrl": "리뷰 이미지 URL",
+            "content": "리뷰 내용"
+          }
+        ],
+        "menu": {
+          "category": {
+            "categoryDiscription": "카테고리 설명-코멘트",
+            "menu": [
+              {
+                "name": "음식 이름",
+                "imgUrl": "음식 사진 optional",
+                "price": "가격"
+              }
+            ]
+          }
+        },
+        "deliveryFee": "배달팁",
+        "notification": "사장님 공고 (리뷰 이벤트 같은 거 있음)",
+        "businessHours": "영업시간",
+        "telephone": "전화번호",
+        "address": "주소"
+      }
+    }
+  }
+}

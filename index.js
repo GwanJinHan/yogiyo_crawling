@@ -84,10 +84,7 @@ const CrawlYogiyo = async (i = 0, section, items) => {
     return items.map((el) => el.innerText);
   });
 
-  //category name yogiyoQuery, titleImgUrl, score, minimumOrderedPrice - 완!
-  //review (name, date, score, menu, imgUrl, content) － 완~
-  // menus (menu-category, categoryDiscription, menu: [name, imgUrl, price])
-  //deliveryFee, notification, businessHours, telephone, address
+  //위치, 이름, 배달료, 이미지 URL, 카테고리, 리뷰 별수
   while (i < itemsLength + 1) {
     if (i % 8 === 0) {
       await browser.close();

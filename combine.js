@@ -14,17 +14,36 @@ try {
   fileNames.forEach((fileName) => {
     // JSON 파일 경로
     const filePath = `${directoryPath}/${fileName}`;
-
+    const uniqueSet = new Set();
     // 파일을 동기적으로 읽기
-    const data = fs.readFileSync(filePath, "utf8");
-
+    const jsondata = fs.readFileSync(filePath, "utf8");
+    let data = JSON.parse(jsondata);
+    if (data.length <= 20) {
+      console.log("short data", fileName);
+      return;
+    }
+    data = data.filter((el) => {
+      if (uniqueSet.has(el.name)) {
+        return false;
+      }
+      if (isNaN(el.score)) {
+        return false;
+      }
+      uniqueSet.add(el.name);
+      if (el.deliveryFee < 3000) {
+        el.deliveryFee = 3000;
+      }
+      if (el.minimumOrderedPrice < 10000) {
+        el.minimumOrderedPrice = 10000;
+      }
+      return true;
+    });
     // JSON 파싱하여 데이터 합치기
-    combinedData.push(...JSON.parse(data));
+    combinedData.push(...data);
   });
-  console.log(combinedData);
 } catch (error) {
   console.error("파일을 읽을 수 없거나 JSON 파싱 오류:", error);
 }
 
 const jsonString = JSON.stringify(combinedData);
-fs.writeFileSync("combined10.json", jsonString, "utf-8");
+fs.writeFileSync("combined.json", jsonString, "utf-8");

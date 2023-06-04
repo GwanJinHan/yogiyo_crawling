@@ -31,7 +31,7 @@ const CrawlYogiyo = async (i = 0, locationIdx, items = []) => {
     if (i > 30) {
       const jsonString = JSON.stringify(items);
       fs.writeFileSync(`${locationIdx}.json`, jsonString, "utf-8");
-      locationIdx += 1;
+      locationIdx += 2;
       return CrawlYogiyo(0, locationIdx, []);
     }
     for (let j = 1; j <= Math.floor(i / 50); j++) {
@@ -59,7 +59,7 @@ const CrawlYogiyo = async (i = 0, locationIdx, items = []) => {
     } catch (err) {
       const jsonString = JSON.stringify(items);
       fs.writeFileSync(`${locationIdx}.json`, jsonString, "utf-8");
-      locationIdx += 1;
+      locationIdx += 2;
       return CrawlYogiyo(0, locationIdx, []);
     }
     await page.waitForTimeout(2000);
@@ -123,4 +123,4 @@ const CrawlYogiyo = async (i = 0, locationIdx, items = []) => {
   }
 };
 
-CrawlYogiyo(0, 210);
+CrawlYogiyo(0, 587);
